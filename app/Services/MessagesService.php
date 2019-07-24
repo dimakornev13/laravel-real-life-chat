@@ -9,15 +9,19 @@
 namespace App\Services;
 
 
+use App\Events\NewMessage;
 use App\MessageModel;
+use Illuminate\Support\Facades\DB;
 
 class MessagesService
 {
     static function conversation(int $from, int $to){
+        MessageModel::where('from', $to)->where('to', $from)->update(['read' => true]);
+
         return MessageModel::where(function ($q) use ($from, $to){
-            return $q->where('from', $from)->where('to', $to);
+            $q->where('from', $from)->where('to', $to);
         })->orWhere(function ($q) use ($from, $to){
-            return $q->where('from', $to)->where('to', $from);
+            $q->where('from', $to)->where('to', $from);
         })->get();
     }
 
@@ -28,6 +32,16 @@ class MessagesService
             'msg' => $params['msg'],
         ]);
 
+        broadcast(new NewMessage($message));
+
         return $message;
+    }
+
+    static function unread(int $for){
+        return MessageModel::select(DB::raw('count(`from`) as unread, `from`'))
+            ->where('to', $for)
+            ->where('read', false)
+            ->groupBy('from')
+            ->get();
     }
 }

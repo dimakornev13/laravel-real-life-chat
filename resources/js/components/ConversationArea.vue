@@ -1,8 +1,8 @@
 <template>
-    <div class="conversation-area col-12 col-md-8">
+    <div class="conversation-area col-12 col-md-7">
         <h2 class="title-conversation">{{ contact ? contact.name : 'Select contact' }}</h2>
         <MessageFeed :contact="contact" :messages="messages"></MessageFeed>
-        <MessageComposer @send="sendMessage"></MessageComposer>
+        <MessageComposer v-show="contact" @send="sendMessage"></MessageComposer>
     </div>
 </template>
 

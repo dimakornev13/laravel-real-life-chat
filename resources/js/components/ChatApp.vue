@@ -26,11 +26,16 @@
         },
 
         mounted() {
-            let context = this;
+            // let context = this;
+
+            Echo.private(`messages.${this.user.id}`)
+                .listen('NewMessage', (e)=>{
+                    this.handleIncoming(e.message);
+                });
 
             axios.get('/api/contacts')
                 .then((response) => {
-                    context.contacts = response.data;
+                    this.contacts = response.data;
                 });
         },
 
@@ -38,6 +43,8 @@
 
         methods: {
             startConversation(contact){
+                this.updateUnread(contact, true);
+
                 axios.get(`/api/conversation/${contact.id}`)
                     .then((response)=>{
                         this.messages = response.data;
@@ -48,6 +55,30 @@
 
             saveNewMessage(msgObject){
                 this.messages.push(msgObject);
+            },
+
+            handleIncoming(message){
+                if(this.selectedContact && message.from === this.selectedContact.id){
+                    this.saveNewMessage(message);
+                    return;
+                }
+
+                let contact = this.contacts.filter((single)=>{
+                    return single.id === message.from;
+                })[0];
+
+                this.updateUnread(contact);
+            },
+
+            updateUnread(contact, reset = false){
+                this.contacts = this.contacts.map((single)=>{
+                    if(single.id !== contact.id)
+                        return single;
+
+                    single.unread = reset ? 0 : single.unread + 1;
+
+                    return single
+                })
             }
         }
     }

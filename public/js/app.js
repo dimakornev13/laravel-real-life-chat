@@ -1745,9 +1745,14 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    var context = this;
+    var _this = this;
+
+    // let context = this;
+    Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
+      _this.handleIncoming(e.message);
+    });
     axios.get('/api/contacts').then(function (response) {
-      context.contacts = response.data;
+      _this.contacts = response.data;
     });
   },
   components: {
@@ -1756,15 +1761,35 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     startConversation: function startConversation(contact) {
-      var _this = this;
+      var _this2 = this;
 
+      this.updateUnread(contact, true);
       axios.get("/api/conversation/".concat(contact.id)).then(function (response) {
-        _this.messages = response.data;
-        _this.selectedContact = contact;
+        _this2.messages = response.data;
+        _this2.selectedContact = contact;
       });
     },
     saveNewMessage: function saveNewMessage(msgObject) {
       this.messages.push(msgObject);
+    },
+    handleIncoming: function handleIncoming(message) {
+      if (this.selectedContact && message.from === this.selectedContact.id) {
+        this.saveNewMessage(message);
+        return;
+      }
+
+      var contact = this.contacts.filter(function (single) {
+        return single.id === message.from;
+      })[0];
+      this.updateUnread(contact);
+    },
+    updateUnread: function updateUnread(contact) {
+      var reset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      this.contacts = this.contacts.map(function (single) {
+        if (single.id !== contact.id) return single;
+        single.unread = reset ? 0 : single.unread + 1;
+        return single;
+      });
     }
   }
 });
@@ -1780,6 +1805,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -1815,6 +1843,19 @@ __webpack_require__.r(__webpack_exports__);
     selectContact: function selectContact(contact) {
       this.selected = contact;
       this.$emit('selectedContact', contact);
+    }
+  },
+  computed: {
+    sortedContacts: function sortedContacts() {
+      var _this = this;
+
+      return _.sortBy(this.contacts, function (contact) {
+        if (contact == _this.selected) {
+          return Infinity;
+        }
+
+        return contact.unread;
+      }).reverse();
     }
   }
 });
@@ -48264,11 +48305,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "contacts-area col-12 col-md-4" }, [
+  return _c("div", { staticClass: "contacts-area col-12 col-md-5" }, [
     _c(
       "ul",
       { staticClass: "list-group" },
-      _vm._l(_vm.contacts, function(contact) {
+      _vm._l(_vm.sortedContacts, function(contact) {
         return _c(
           "li",
           {
@@ -48290,7 +48331,7 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "contact-wrap col-9" }, [
+            _c("div", { staticClass: "contact-wrap col-7" }, [
               _c("p", { staticClass: "contact-name" }, [
                 _c("b", [_vm._v(_vm._s(contact.name))])
               ]),
@@ -48298,6 +48339,16 @@ var render = function() {
               _c("p", { staticClass: "contact-email" }, [
                 _vm._v(_vm._s(contact.email))
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-2" }, [
+              contact.unread
+                ? _c(
+                    "span",
+                    { staticClass: "badge badge-primary badge-pill" },
+                    [_vm._v(_vm._s(contact.unread))]
+                  )
+                : _vm._e()
             ])
           ]
         )
@@ -48330,7 +48381,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "conversation-area col-12 col-md-8" },
+    { staticClass: "conversation-area col-12 col-md-7" },
     [
       _c("h2", { staticClass: "title-conversation" }, [
         _vm._v(_vm._s(_vm.contact ? _vm.contact.name : "Select contact"))
@@ -48340,7 +48391,17 @@ var render = function() {
         attrs: { contact: _vm.contact, messages: _vm.messages }
       }),
       _vm._v(" "),
-      _c("MessageComposer", { on: { send: _vm.sendMessage } })
+      _c("MessageComposer", {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.contact,
+            expression: "contact"
+          }
+        ],
+        on: { send: _vm.sendMessage }
+      })
     ],
     1
   )

@@ -18,6 +18,7 @@ class Messages extends Migration
 
             $table->unsignedInteger('from');
             $table->unsignedInteger('to');
+            $table->boolean('read')->default(false);
             $table->text('msg');
 
             $table->timestamps();
