@@ -1,10 +1,22 @@
 <template>
-    <div class="chat-app" id="">
+    <div class="chat-app row">
+        <ConversationArea :contact="selectedContact" :messages="messages"></ConversationArea>
+        <ContactListArea :contacts="contacts" :selectedContact="startConversation"></ContactListArea>
     </div>
 </template>
 
 <script>
+    import ConversationArea from './ConversationArea';
+    import ContactListArea from './ContactListArea';
+
     export default {
+        props: {
+            user: {
+                type: Object,
+                required: true
+            }
+        },
+
         data(){
             return {
                 selectedContact: null,
@@ -14,11 +26,25 @@
         },
 
         mounted() {
+            let context = this;
+
             axios.get('/api/contacts')
                 .then((response) => {
-                    console.log(response);
-                    this.contacts = response.data;
+                    context.contacts = response.data;
                 });
+        },
+
+        components: {ConversationArea, ContactListArea},
+
+        methods: {
+            startConversation(contact){
+                axios.get(`/conversation/${contact.id}`)
+                    .then((response)=>{
+                        this.messages = response.data;
+
+                        this.selectedContact = contact;
+                    })
+            }
         }
     }
 </script>

@@ -18,8 +18,7 @@ use Illuminate\Http\Request;
 //});
 
 Route::middleware('auth:api', 'auto.json')->group(function (){
+    Route::get('contacts', 'ContactsController@contacts');
 
-
-
-    Route::get('contacts', 'ContactController@contacts');
+    Route::get('conversation/{id}', 'MessagesController@conversation');
 });

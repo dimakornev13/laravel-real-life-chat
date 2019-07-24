@@ -8,7 +8,7 @@
                 <div class="card-header">Chat pet project</div>
 
                 <div class="card-body" id="app">
-
+                    <chat-app :user="{{ $user }}"></chat-app>
                 </div>
             </div>
         </div>
