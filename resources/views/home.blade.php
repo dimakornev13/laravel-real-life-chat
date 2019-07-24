@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Chat pet project</div>
 
-                <div class="card-body">
+                <div class="card-body" id="app">
 
                 </div>
             </div>
