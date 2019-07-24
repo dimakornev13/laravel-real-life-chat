@@ -21,4 +21,5 @@ Route::middleware('auth:api', 'auto.json')->group(function (){
     Route::get('contacts', 'ContactsController@contacts');
 
     Route::get('conversation/{id}', 'MessagesController@conversation');
+    Route::post('conversation/send/{to}', 'MessagesController@send');
 });

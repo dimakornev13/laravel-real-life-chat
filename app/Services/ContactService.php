@@ -13,7 +13,7 @@ use App\User;
 
 class ContactService
 {
-    static function getContacts(){
-        return User::all();
+    static function getContacts(int $except){
+        return User::where('id', '!=', $except)->get();
     }
 }

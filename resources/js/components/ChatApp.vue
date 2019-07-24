@@ -1,7 +1,7 @@
 <template>
     <div class="chat-app row">
-        <ConversationArea :contact="selectedContact" :messages="messages"></ConversationArea>
-        <ContactListArea :contacts="contacts" :selectedContact="startConversation"></ContactListArea>
+        <ConversationArea :contact="selectedContact" :messages="messages" @newMessageSent="saveNewMessage"></ConversationArea>
+        <ContactListArea :contacts="contacts" @selectedContact="startConversation"></ContactListArea>
     </div>
 </template>
 
@@ -38,12 +38,16 @@
 
         methods: {
             startConversation(contact){
-                axios.get(`/conversation/${contact.id}`)
+                axios.get(`/api/conversation/${contact.id}`)
                     .then((response)=>{
                         this.messages = response.data;
 
                         this.selectedContact = contact;
                     })
+            },
+
+            saveNewMessage(msgObject){
+                this.messages.push(msgObject);
             }
         }
     }

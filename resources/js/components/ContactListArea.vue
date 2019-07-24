@@ -1,12 +1,13 @@
 <template>
     <div class="contacts-area col-12 col-md-4">
         <ul class="list-group">
-            <li class="list-group-item row" v-for="contact in contacts" :key="contact.id" @click="selectContact(contact)">
-                <div class="contact-avatar col-4">
+            <li class="list-group-item row d-flex align-items-center pointer" v-for="contact in contacts" :key="contact.id" @click="selectContact(contact)"
+                :class="{active: selected.id == contact.id}">
+                <div class="contact-avatar col-3">
                     <img :src="contact.avatar" :alt="contact.name" class="img-responsive rounded-circle">
                 </div>
-                <div class="contact-wrap col-8">
-                    <p class="contact-name">{{ contact.name }}</p>
+                <div class="contact-wrap col-9">
+                    <p class="contact-name"><b>{{ contact.name }}</b></p>
                     <p class="contact-email">{{ contact.email }}</p>
                 </div>
             </li>
@@ -25,7 +26,9 @@
 
         data(){
             return {
-                selected: null
+                selected: {
+                    id: 0
+                }
             }
         },
 
@@ -36,14 +39,6 @@
                 this.$emit('selectedContact', contact);
             }
         },
-
-        // watch: {
-        //     contacts(newContacts){
-        //
-        //         console.log(newContacts);
-        //         return newContacts;
-        //     }
-        // }
     }
 </script>
 

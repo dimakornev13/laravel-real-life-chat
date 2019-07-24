@@ -3,13 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="2af50ae7-25be-414c-be2c-f6c8022c92c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/MessageModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MessageModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ContactService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ContactService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/MessagesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/MessagesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/MessagesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MessagesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MessagesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MessagesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ChatApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ChatApp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ContactListArea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ContactListArea.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ConversationArea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ConversationArea.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MessageComposer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MessageComposer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MessageFeed.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MessageFeed.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +41,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/ChatApp.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+              <folding>
+                <element signature="e#234#284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/ConversationArea.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding>
+                <element signature="e#289#329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/MessageFeed.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Services/MessagesService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="68" />
+            <state relative-caret-position="483">
+              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -44,82 +101,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/ChatApp.vue">
+        <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding>
-                <element signature="e#234#284#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="680">
+              <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/ConversationArea.vue">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-              <folding>
-                <element signature="e#289#329#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="685">
+              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/ContactListArea.vue">
+        <entry file="file://$PROJECT_DIR$/app/Events/NewMessage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/MessageComposer.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/MessageFeed.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="722">
+              <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
               <folding>
-                <element signature="e#40#73#0#PHP" expanded="true" />
+                <element signature="e#30#51#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/MessagesService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -139,6 +154,9 @@
       <find>X-Requested-With</find>
       <find>encrypt</find>
       <find>Addjson</find>
+      <find>selectedContact</find>
+      <find>startConversation</find>
+      <find>option</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,19 +168,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
-        <option value="$PROJECT_DIR$/app/MessageModel.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_23_170817_messages.php" />
-        <option value="$PROJECT_DIR$/database/factories/MessagesFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/MessagesSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/AddJsonHeader.php" />
-        <option value="$PROJECT_DIR$/app/Services/ContactService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" />
         <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
@@ -177,15 +187,26 @@
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/MessageComposer.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/MessageFeed.vue" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" />
-        <option value="$PROJECT_DIR$/app/Services/MessagesService.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/ChatApp.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/ConversationArea.vue" />
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/js/components/ContactListArea.vue" />
+        <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/MessagesSeeder.php" />
+        <option value="$PROJECT_DIR$/database/factories/MessagesFactory.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" />
+        <option value="$PROJECT_DIR$/app/Services/ContactService.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/ChatApp.vue" />
+        <option value="$PROJECT_DIR$/app/MessageModel.php" />
+        <option value="$PROJECT_DIR$/app/Services/MessagesService.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/MessageComposer.vue" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/SendMessageRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
+        <option value="$PROJECT_DIR$/resources/js/components/ConversationArea.vue" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/MessageFeed.vue" />
+        <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/config/broadcasting.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Events/NewMessage.php" />
       </list>
     </option>
   </component>
@@ -356,6 +377,12 @@
               <item name="www" type="b2602c69:ProjectViewProjectNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -445,12 +472,12 @@
       <updated>1563891488908</updated>
       <workItem from="1563891490052" duration="704000" />
       <workItem from="1563901070838" duration="2492000" />
-      <workItem from="1563949420705" duration="21015000" />
+      <workItem from="1563949420705" duration="29279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24211000" />
+    <option name="totallyTimeSpent" value="32475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1051" extended-state="6" />
@@ -489,45 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/MessageModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_23_170817_messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/MessagesFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/MessagesSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -555,13 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ContactService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -619,16 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -670,13 +645,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/AuthService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -701,13 +669,6 @@
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -754,6 +715,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/MessagesSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/MessagesFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ContactService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_23_170817_messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ContactListArea.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/SendMessageRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#40#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/MessageComposer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MessageModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/MessagesService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ChatApp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="e#234#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ConversationArea.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="e#289#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/MessageFeed.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -761,75 +853,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/MessageComposer.vue">
+    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="680">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/MessageFeed.vue">
+    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="525">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="68" />
+        <state relative-caret-position="685">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
+    <entry file="file://$PROJECT_DIR$/app/Events/NewMessage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="722">
+          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
           <folding>
-            <element signature="e#40#73#0#PHP" expanded="true" />
+            <element signature="e#30#51#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/MessagesService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ConversationArea.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <element signature="e#289#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ChatApp.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding>
-            <element signature="e#234#284#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ContactListArea.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -11,6 +11,6 @@ class MessagesSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\MessageModel::class, 1000)->create();
+        factory(\App\MessageModel::class, 10000)->create();
     }
 }

@@ -10648,3 +10648,29 @@ a.text-dark:focus {
   width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.contact-name,
+.contact-email {
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contacts-area {
+  max-height: 79vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.hidden {
+  display: none !important;
+}
+

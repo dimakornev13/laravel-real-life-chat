@@ -1,6 +1,6 @@
 <template>
     <div class="composer">
-        <textarea v-model="message" @keyup.ctrl.enter="send"></textarea>
+        <textarea v-model="message" @keyup.ctrl.enter="send" class=" form-control text-area" placeholder="Message..."></textarea>
     </div>
 </template>
 
@@ -26,5 +26,9 @@
 </script>
 
 <style scoped>
-
+    .text-area{
+        width: 100%;
+        min-height: 150px;
+        resize: none;
+    }
 </style>

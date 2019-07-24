@@ -20,4 +20,14 @@ class MessagesService
             return $q->where('from', $to)->where('to', $from);
         })->get();
     }
+
+    static function saveNewMessage(array $params){
+        $message = MessageModel::create([
+            'from' => $params['from'],
+            'to' => $params['to'],
+            'msg' => $params['msg'],
+        ]);
+
+        return $message;
+    }
 }

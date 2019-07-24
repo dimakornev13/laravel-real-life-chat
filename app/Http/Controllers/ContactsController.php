@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 class ContactsController extends Controller
 {
     function contacts(){
-        return ContactService::getContacts();
+        $except = auth()->id();
+
+        return ContactService::getContacts($except);
     }
 }

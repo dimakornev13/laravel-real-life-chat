@@ -1,6 +1,6 @@
 <template>
     <div class="conversation-area col-12 col-md-8">
-        <h2>{{ contact ? contact.name : 'Select contact' }}</h2>
+        <h2 class="title-conversation">{{ contact ? contact.name : 'Select contact' }}</h2>
         <MessageFeed :contact="contact" :messages="messages"></MessageFeed>
         <MessageComposer @send="sendMessage"></MessageComposer>
     </div>
@@ -24,7 +24,14 @@
 
         methods: {
             sendMessage(msg){
-                console.log(msg);
+                if(!this.contact)
+                    return;
+
+                axios.post(`/api/conversation/send/${this.contact.id}`, {
+                    msg: msg
+                }).then((response)=>{
+                    this.$emit('newMessageSent', response.data);
+                })
             },
         },
 
@@ -33,5 +40,7 @@
 </script>
 
 <style scoped>
-
+    .title-conversation{
+        border-bottom: 1px dashed lightgrey;
+    }
 </style>

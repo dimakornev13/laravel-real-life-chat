@@ -8,5 +8,7 @@ class MessageModel extends Model
 {
     protected $table = 'messages';
 
+    public $timestamps = true;
+
     protected $guarded = [];
 }
