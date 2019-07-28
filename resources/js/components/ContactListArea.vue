@@ -1,8 +1,8 @@
 <template>
     <div class="contacts-area col-12 col-md-5">
         <ul class="list-group">
-            <li class="list-group-item row d-flex align-items-center pointer" v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)"
-                :class="{active: selected.id == contact.id}">
+            <li class="list-group-item row d-flex align-items-center pointer" v-for="contact in sortedContacts" :key="contact.id" @click="setCurrent(contact)"
+                :class="{active: current.id === contact.id}">
                 <div class="contact-avatar col-3">
                     <img :src="contact.avatar" :alt="contact.name" class="img-responsive rounded-circle">
                 </div>
@@ -19,41 +19,33 @@
 </template>
 
 <script>
+    import {mapGetters, mapState, mapActions} from 'vuex';
+
     export default {
-        props: {
-            contacts: {
-                type: Array,
-                default: []
-            }
+
+        mounted() {
+            let context = this;
+
+            axios.get('/api/contacts')
+                .then((response) => {
+                    context.$store.dispatch('setContactsA', response.data);
+                });
         },
 
-        data(){
-            return {
-                selected: {
-                    id: 0
-                }
-            }
+        computed: {
+            ...mapGetters(['sortedContacts']),
+            ...mapState({
+                current: state => state.contactList.current
+            })
         },
 
         methods: {
-            selectContact(contact){
-                this.selected = contact;
-
-                this.$emit('selectedContact', contact);
-            }
+            ...mapActions({
+                setCurrent: 'setCurrentA',
+            })
         },
 
-        computed:{
-            sortedContacts(){
-                return _.sortBy(this.contacts, (contact)=>{
-                    if(contact == this.selected){
-                        return Infinity;
-                    }
 
-                    return contact.unread;
-                }).reverse()
-            }
-        }
     }
 </script>
 

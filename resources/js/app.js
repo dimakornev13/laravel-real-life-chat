@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.Vuex = require('vuex');
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,6 +20,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+import store from './stores';
+
 Vue.component('chat-app', require('./components/ChatApp.vue').default);
 
 /**
@@ -29,5 +32,5 @@ Vue.component('chat-app', require('./components/ChatApp.vue').default);
 
 const app = new Vue({
     el: '#app',
-
+    store,
 });
