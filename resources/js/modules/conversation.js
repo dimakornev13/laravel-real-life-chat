@@ -16,7 +16,6 @@ const actions = {
             msg: payload
         }).then((response) => {
             commit('setMessageM', response.data)
-        }).then(() => {
             dispatch('scrollBottom')
         })
     },
@@ -27,9 +26,8 @@ const actions = {
             .then((response) => {
                 commit('setMessagesM', response.data);
                 commit('setCurrentM', contact)
-            }).then(() => {
-            dispatch('scrollBottom')
-        })
+                dispatch('scrollBottom')
+            })
     },
 
     incomingMessage: ({dispatch, commit, state}, incomingMessage) => {
